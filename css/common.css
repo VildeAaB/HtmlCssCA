@@ -1,0 +1,48 @@
+:root {
+  --darkgreen: rgb(2, 89, 81);
+  --lightgray: rgb(112, 112, 112);
+}
+
+body {
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  min-height: 100vh;
+  margin: 0;
+  font-family: "Roboto Condensed", sans-serif;
+}
+
+main {
+  grid-area: main;
+  padding-left: 6vw;
+  padding-right: 6vw;
+}
+
+/* mobile styles */
+@media only screen and (max-width: 640px) {
+  body {
+    grid-template-areas:
+      "header"
+      "main"
+      "footer";
+  }
+}
+
+/*tablet styles*/
+@media only screen and (min-width: 641px) and (max-width: 1366px) {
+  body {
+    grid-template-areas:
+      "header"
+      "main"
+      "footer";
+  }
+}
+
+/*desktop styles*/
+@media only screen and (min-width: 1367px) {
+  body {
+    grid-template-areas:
+      "header"
+      "main"
+      "footer";
+  }
+}

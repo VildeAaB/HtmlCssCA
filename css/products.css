@@ -1,0 +1,156 @@
+body {
+  row-gap: 1em;
+}
+
+main {
+  display: grid;
+  row-gap: 2em;
+}
+
+.products-title {
+  grid-area: products-title;
+  text-align: center;
+}
+
+.products-title h1 {
+  color: var(--darkgreen);
+  margin: 0px;
+  font-weight: normal;
+}
+
+.products-title h2 {
+  color: var(--lightgray);
+  margin: 0px;
+  font-weight: normal;
+}
+
+.products-list {
+  grid-area: products-list;
+  display: grid;
+  gap: 1em;
+}
+
+.product-item {
+  border: 1px solid var(--lightgray);
+}
+
+.product-item a {
+  text-decoration: none;
+  text-align: center;
+  color: var(--lightgray);
+}
+
+.product-item img {
+  width: 100%;
+  height: 100%;
+  max-height: 75%;
+}
+
+.first-product {
+  grid-area: first-product;
+}
+
+.second-product {
+  grid-area: second-product;
+}
+
+.third-product {
+  grid-area: third-product;
+}
+
+.fourth-product {
+  grid-area: fourth-product;
+}
+
+.fifth-product {
+  grid-area: fifth-product;
+}
+
+.sixth-product {
+  grid-area: sixth-product;
+}
+
+.seventh-product {
+  grid-area: seventh-product;
+}
+
+.eight-product {
+  grid-area: eight-product;
+}
+
+/* mobile styles */
+@media only screen and (max-width: 640px) {
+  main {
+    grid-template-areas:
+      "products-title"
+      "products-list";
+  }
+
+  .products-title h1 {
+    font-size: 35px;
+  }
+
+  .products-title h2 {
+    font-size: 20px;
+  }
+
+  .products-list {
+    grid-template-areas:
+      "first-product"
+      "second-product"
+      "third-product"
+      "fourth-product"
+      "fifth-product"
+      "sixth-product"
+      "seventh-product"
+      "eight-product";
+  }
+}
+
+/*tablet styles*/
+@media only screen and (min-width: 641px) and (max-width: 1366px) {
+  main {
+    grid-template-areas:
+      "products-title"
+      "products-list";
+  }
+
+  .products-title h1 {
+    font-size: 75px;
+  }
+
+  .products-title h2 {
+    font-size: 19px;
+  }
+
+  .products-list {
+    grid-template-areas:
+      "first-product second-product"
+      "third-product fourth-product"
+      "fifth-product sixth-product"
+      "seventh-product eight-product";
+  }
+}
+
+/*desktop styles*/
+@media only screen and (min-width: 1367px) {
+  main {
+    grid-template-areas:
+      "products-title"
+      "products-list";
+  }
+
+  .products-title h1 {
+    font-size: 153px;
+  }
+
+  .products-title h2 {
+    font-size: 38px;
+  }
+
+  .products-list {
+    grid-template-areas:
+      "first-product second-product third-product fourth-product"
+      "fifth-product sixth-product seventh-product eight-product";
+  }
+}

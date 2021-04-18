@@ -1,0 +1,27 @@
+body {
+  row-gap: 1em;
+  background-image: url("../images/background-image.jpg");
+  background-repeat: no-repeat;
+  background-size: 100% auto;
+}
+
+.ad-and-about-content {
+  display: grid;
+  grid-template-areas: "left-ad about-content about-content about-content right-ad";
+  column-gap: 1em;
+  height: 100%;
+}
+
+.about-content {
+  grid-area: about-content;
+  border: 5px solid var(--darkgreen);
+  border-radius: 5em;
+  background-color: white;
+}
+
+.inner-about-content {
+  margin: 3em;
+  border: 13px solid var(--darkgreen);
+  padding: 1em;
+  height: calc(100% - 6em - 50px);
+}

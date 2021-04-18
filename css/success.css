@@ -1,0 +1,135 @@
+body {
+  row-gap: 1em;
+  background-image: url("../images/background-image.jpg");
+  background-repeat: no-repeat;
+  background-size: 100% auto;
+}
+
+.success-content {
+  display: grid;
+  gap: 1em;
+  background-color: white;
+  border: 5px solid var(--darkgreen);
+  border-radius: 5em;
+  padding-left: 5vw;
+  padding-right: 5vw;
+  height: 100%;
+  color: var(--darkgreen);
+  justify-content: center;
+}
+
+.success-title {
+  grid-area: success-title;
+  text-align: center;
+}
+
+.success-summary {
+  grid-area: success-summary;
+  border: 5px solid var(--darkgreen);
+  border-radius: 1em;
+  padding: 1em;
+}
+
+.success-summary img {
+  width: 5vw;
+  min-width: 150px;
+  height: auto;
+  border: 4px solid var(--darkgreen);
+}
+
+.success-quantity {
+  display: inline;
+  border: 1px solid var(--darkgreen);
+}
+
+.success-check-mark {
+  grid-area: success-check-mark;
+  text-align: center;
+}
+
+.success-check-mark img {
+  width: 6vw;
+  min-width: 200px;
+  height: auto;
+}
+
+.success-address {
+  grid-area: success-address;
+  border: 5px solid var(--darkgreen);
+  border-radius: 1em;
+
+  padding: 1em;
+  background-color: rgba(11, 58, 64, 0.16);
+}
+
+.success-address ul {
+  padding: 0px;
+}
+
+.address-row {
+  display: block;
+  margin: 0.5em;
+  border: 1px solid var(--darkgreen);
+  background-color: white;
+}
+
+.success-button {
+  grid-area: success-button;
+  text-align: center;
+}
+
+.success-button a {
+  font-size: 37px;
+  color: var(--darkgreen);
+  text-decoration: none;
+  display: inline-block;
+  margin: 16px;
+  border: var(--darkgreen) 6px solid;
+  padding: 10px 20px 10px 20px;
+}
+
+/* mobile styles */
+@media only screen and (max-width: 640px) {
+  .success-content {
+    grid-template-areas:
+      "success-title"
+      "success-check-mark"
+      "success-summary"
+      "success-address"
+      "success-button ";
+  }
+}
+
+/*tablet styles*/
+@media only screen and (min-width: 641px) and (max-width: 1366px) {
+  .success-content {
+    grid-template-areas:
+      "success-title"
+      "success-check-mark"
+      "success-summary"
+      "success-address"
+      "success-button ";
+  }
+}
+
+/*desktop styles*/
+@media only screen and (min-width: 1367px) {
+  .success-content {
+    grid-template-areas:
+      "success-title success-title success-title success-title success-title"
+      "success-summary success-summary success-check-mark success-address success-address"
+      "success-button success-button success-button success-button success-button";
+  }
+
+  .success-summary {
+    width: 24vw;
+  }
+
+  .success-check-mark {
+    width: 20vw;
+  }
+
+  .success-address {
+    width: 24vw;
+  }
+}

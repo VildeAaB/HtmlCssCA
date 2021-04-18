@@ -1,0 +1,44 @@
+.advertisement {
+  background-color: white;
+  border: 5px solid var(--darkgreen);
+  padding: 32px;
+}
+
+.advertisement img {
+  height: auto;
+  width: 100%;
+  display: block;
+}
+
+.left-ad {
+  grid-area: left-ad;
+}
+
+.right-ad {
+  grid-area: right-ad;
+}
+
+/* mobile styles */
+@media only screen and (max-width: 640px) {
+  .advertisement {
+    display: none;
+  }
+}
+
+/*tablet styles*/
+@media only screen and (min-width: 641px) and (max-width: 1366px) {
+  .advertisement {
+    display: none;
+  }
+}
+
+/*desktop styles*/
+@media only screen and (min-width: 1367px) {
+  .left-ad {
+    width: 16vw;
+  }
+
+  .right-ad {
+    width: 16vw;
+  }
+}

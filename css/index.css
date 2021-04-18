@@ -1,0 +1,446 @@
+body {
+  row-gap: 6em;
+  background-image: url("../images/background-image.jpg");
+  background-repeat: no-repeat;
+  background-size: 100% auto;
+}
+
+main {
+  display: grid;
+  row-gap: 16em;
+}
+
+.ad-and-photo-carousel {
+  grid-area: ad-and-photo-carousel;
+  display: grid;
+  justify-items: center;
+}
+
+.photo-carousel {
+  grid-area: photo-carousel;
+  background-color: white;
+  border: 5px solid var(--darkgreen);
+  border-radius: 5em;
+  padding: 2em 3vw 2em 3vw;
+}
+
+.search-bar {
+  border: 1px solid var(--darkgreen);
+  margin-bottom: 1em;
+  font-size: 50px;
+  color: var(--lightgray);
+  padding: 0.5em;
+}
+
+.inner-photo-carousel {
+  border: 13px solid var(--darkgreen);
+  padding: 3em 3vw 3em 3vw;
+  display: grid;
+}
+
+.left-carousel {
+  grid-area: left-carousel;
+  width: 10vw;
+  z-index: 0;
+  text-align: right;
+}
+
+.left-carousel img {
+  position: relative;
+  top: 50%;
+  width: 70%;
+  height: 70%;
+  transform: translateY(-50%);
+}
+
+.center-carousel {
+  grid-area: center-carousel;
+  z-index: 10;
+}
+
+.center-carousel img {
+  width: 100%;
+  height: 100%;
+}
+
+.right-carousel {
+  grid-area: right-carousel;
+  width: 10vw;
+  z-index: 0;
+}
+
+.right-carousel img {
+  position: relative;
+  width: 70%;
+  height: 70%;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.categories {
+  grid-area: categories;
+  display: grid;
+  justify-items: center;
+}
+
+.first-line-categories {
+  display: grid;
+  grid-area: first-line-categories;
+}
+
+.first-line-categories img {
+  width: 100%;
+  height: auto;
+}
+
+.ski-and-snowboard {
+  grid-area: ski-and-snowboard;
+}
+
+.camping {
+  grid-area: camping;
+}
+
+.canoe {
+  grid-area: canoe;
+}
+
+.information {
+  grid-area: information;
+  display: grid;
+  border: solid black 1px;
+  width: 100%;
+  justify-items: center;
+}
+
+.truck {
+  grid-area: truck;
+  margin: 0.5em;
+}
+
+.truck * {
+  display: inline-block;
+  margin: 0;
+  vertical-align: middle;
+}
+
+.clock {
+  grid-area: clock;
+  margin: 0.5em;
+}
+
+.clock * {
+  display: inline-block;
+  margin: 0;
+  vertical-align: middle;
+}
+
+.second-line-categories {
+  grid-area: second-line-categories;
+  display: grid;
+}
+
+.second-line-categories img {
+  width: 100%;
+  height: auto;
+}
+
+.women {
+  grid-area: women;
+}
+
+.hiking {
+  grid-area: hiking;
+}
+
+.men {
+  grid-area: men;
+}
+
+.products {
+  grid-area: products;
+  display: grid;
+}
+
+.product-title {
+  grid-area: product-title;
+  text-align: center;
+}
+
+.product-title h1 {
+  color: var(--darkgreen);
+  margin: 0px;
+  font-weight: normal;
+}
+
+.product-title h2 {
+  color: var(--lightgray);
+  margin: 0px;
+  font-weight: normal;
+}
+
+.product-images {
+  grid-area: product-images;
+  display: grid;
+}
+
+.product-images img {
+  width: 100%;
+  height: 100%;
+}
+
+.product-image1 {
+  grid-area: product-image1;
+}
+
+.product-image2 {
+  grid-area: product-image2;
+}
+
+.product-image3 {
+  grid-area: product-image3;
+}
+
+.product-image4 {
+  grid-area: product-image4;
+}
+
+.product-image5 {
+  grid-area: product-image5;
+}
+
+.product-image6 {
+  grid-area: product-image6;
+}
+
+.product-image7 {
+  grid-area: product-image7;
+}
+
+.product-image8 {
+  grid-area: product-image8;
+}
+
+/* mobile styles */
+@media only screen and (max-width: 640px) {
+  main {
+    grid-template-areas:
+      "ad-and-photo-carousel"
+      "categories"
+      "products";
+  }
+
+  .ad-and-photo-carousel {
+    grid-template-areas: "photo-carousel";
+  }
+
+  .left-carousel {
+    display: none;
+  }
+
+  .right-carousel {
+    display: none;
+  }
+
+  .categories {
+    grid-template-areas:
+      "first-line-categories"
+      "information"
+      "second-line-categories";
+    row-gap: 5em;
+  }
+
+  .first-line-categories {
+    grid-template-areas:
+      "ski-and-snowboard"
+      "camping"
+      "canoe";
+  }
+
+  .information {
+    grid-template-areas:
+      "truck"
+      "clock";
+  }
+
+  .second-line-categories {
+    grid-template-areas:
+      "women"
+      "hiking"
+      "men";
+  }
+
+  .products {
+    grid-template-areas:
+      "product-title"
+      "product-images";
+    row-gap: 3em;
+  }
+
+  .product-title h1 {
+    font-size: 35px;
+  }
+
+  .product-title h2 {
+    font-size: 20px;
+  }
+
+  .product-images {
+    grid-template-areas:
+      "product-image1"
+      "product-image2"
+      "product-image3"
+      "product-image4"
+      "product-image5"
+      "product-image6"
+      "product-image7"
+      "product-image8";
+    row-gap: 1em;
+  }
+}
+
+/*tablet styles*/
+@media only screen and (min-width: 641px) and (max-width: 1366px) {
+  main {
+    grid-template-areas:
+      "ad-and-photo-carousel"
+      "categories"
+      "products";
+  }
+
+  .ad-and-photo-carousel {
+    grid-template-areas: "photo-carousel";
+    column-gap: 1em;
+  }
+
+  .left-carousel {
+    display: none;
+  }
+
+  .right-carousel {
+    display: none;
+  }
+
+  .categories {
+    grid-template-areas:
+      "first-line-categories"
+      "information"
+      "second-line-categories";
+    row-gap: 5em;
+  }
+
+  .first-line-categories {
+    grid-template-areas:
+      "ski-and-snowboard"
+      "camping"
+      "canoe";
+  }
+
+  .information {
+    grid-template-areas:
+      "truck"
+      "clock";
+  }
+
+  .second-line-categories {
+    grid-template-areas:
+      "women"
+      "hiking"
+      "men";
+  }
+
+  .products {
+    grid-template-areas:
+      "product-title"
+      "product-images";
+    row-gap: 3em;
+    justify-items: center;
+  }
+
+  .product-title h1 {
+    font-size: 75px;
+  }
+
+  .product-title h2 {
+    font-size: 19px;
+  }
+
+  .product-images {
+    grid-template-areas:
+      "product-image1 product-image2"
+      "product-image3 product-image4"
+      "product-image5 product-image6"
+      "product-image7 product-image8";
+    column-gap: 1em;
+    row-gap: 1em;
+  }
+}
+
+/*desktop styles*/
+@media only screen and (min-width: 1367px) {
+  main {
+    grid-template-areas:
+      "ad-and-photo-carousel"
+      "categories"
+      "products";
+  }
+
+  .ad-and-photo-carousel {
+    grid-template-areas: "left-ad photo-carousel photo-carousel photo-carousel right-ad";
+    column-gap: 1em;
+  }
+
+  .photo-carousel {
+    width: 35vw;
+  }
+
+  .inner-photo-carousel {
+    grid-template-areas: "left-carousel center-carousel right-carousel";
+  }
+
+  .categories {
+    grid-template-areas:
+      "first-line-categories"
+      "information"
+      "second-line-categories";
+    row-gap: 5em;
+  }
+
+  .first-line-categories {
+    grid-template-areas: "ski-and-snowboard camping canoe";
+    column-gap: 1em;
+  }
+
+  .information {
+    grid-template-areas: "truck clock";
+  }
+
+  .second-line-categories {
+    grid-template-areas: "women hiking men";
+    column-gap: 1em;
+  }
+
+  .products {
+    grid-template-areas:
+      "product-title"
+      "product-images";
+    row-gap: 3em;
+    justify-items: center;
+  }
+
+  .product-title h1 {
+    font-size: 153px;
+  }
+
+  .product-title h2 {
+    font-size: 38px;
+  }
+
+  .product-images {
+    grid-template-areas:
+      "product-image1 product-image2 product-image3 product-image4 product-image5"
+      ". product-image6 product-image7 product-image8 .";
+    column-gap: 1em;
+    row-gap: 8em;
+  }
+}
